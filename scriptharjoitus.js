@@ -1,4 +1,4 @@
-const kurssinOsat = document.querySelectorAll('.sisalta');
+const kurssinOsat = document.querySelectorAll('.sisalto');
 
 kurssinOsat.forEach(osa)=>console.log(osa));
 

@@ -1,10 +1,30 @@
+
 const emailnappi = document.querySelector('.lahetanappi');
+const nimiSisalto = document.querySelector('#nimi');
+const emailSisalto = document.querySelector('#email');
+const viestiSisalto = document.querySelector('#viesti');
+const virhe = document.querySelector ('.virheilmoitus');
 
 emailnappi.addEventListener('click', e => {
+  e.preventDefault();
   sendJSON();
+
+  if(nimiSisalto.value === '' || emailSisalto.value === '' || viestiSisalto.value === ''){
+  virhe.classList.add('virhe');
+  virhe.innerHTML = 'Täytä kaikki kentät!';
+  setTimeout(() => virhe.classList.remove('virhe'), 3000);
+  setTimeout(() => virhe.innerHTML = '', 3000);
+  }
+
+  else{
+  const li = document.createElement('li');
+  li.appendChild(document.createTextNode(`${nimiSisalto.value}:${emailSisalto.value}:${viestiSisalto.value}`));
+  viesti.appendChild(li);
+  nimiSisalto.value = '';
+  emailSisalto.value = '';
+  viestiSisalto.value = '';
+  }
 });
-
-
 
 function sendJSON(){ 
   console.log("sent here");     
@@ -34,10 +54,10 @@ function sendJSON(){
 
     // Converting JSON data to string 
     var data = JSON.stringify({
-      "EmailMsg": "Azure",
-      "EmailAddress": "nella.virtanen@edu.salpaus.fi",
-      "EmailTo": "nellu.virtanen@gmail.com",
-      "EmailName": "Joku Jokunen"
+      "EmailMsg": "#viesti", //Viestin sisältö
+      "EmailAddress": "#email", //Lähettäjän sähköposti
+      "EmailTo": "nellu.virtanen@gmail.com", //Sivun sähköposti
+      "EmailName": "#nimi" //Lähettäjän nimi
     }); 
 
     // Sending data with the request 
