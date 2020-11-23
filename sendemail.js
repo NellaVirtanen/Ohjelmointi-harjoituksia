@@ -54,10 +54,10 @@ function sendJSON(){
 
     // Converting JSON data to string 
     var data = JSON.stringify({
-      "EmailMsg": "#viesti", //Viestin sisältö
-      "EmailAddress": "#email", //Lähettäjän sähköposti
+      "EmailMsg": "Viesti", //Viestin sisältö
+      "EmailAddress": "nella.virtanen@edu.salpaus.fi", //Lähettäjän sähköposti
       "EmailTo": "nellu.virtanen@gmail.com", //Sivun sähköposti
-      "EmailName": "#nimi" //Lähettäjän nimi
+      "EmailName": "Nimi" //Lähettäjän nimi
     }); 
 
     // Sending data with the request 
