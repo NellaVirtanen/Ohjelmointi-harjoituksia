@@ -1,6 +1,38 @@
-<html>
-  <body>
+ <!DOCTYPE html>
+    <html lang="en">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    rel="stylesheet">
+<!-- purple-theme.css is the default theme. I have maintained 3 more css files, red-theme.css, blue-theme.css and green-theme.css in the same css location -->
 
-
+    <link rel="stylesheet" href="purple-theme.css" class="change-theme" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> 
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"> 
+    </script>
+    <script>
+    $(document).on('click', ".btn-color-change", function() {
+        $(".change-theme").attr("href", this.id + "-theme.css");
+    });
+    </script>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <body>
+    <div>
+        <button id="red" class="btn-color-change">Red theme</button>
+        <button id="green" class="btn-color-change">Green theme</button>
+        <button id="blue" class="btn-color-change">Blue theme</button>
+        <button id="purple" class="btn-color-change">Purple theme</button>
+    </div>
+    <div class="row">
+        <div class="col-md-3 color-theme" style="border:5px solid white">
+            Keep looking up… that’s the secret of life. - Charlie Brown</div>
+    </div>
+    <div class="col-md-3 color-theme" style="border:5px solid white">
+        The first step is you have to say that you can. - Will Smith
+    </div>
+    </div>
     </body>
-  </html>
+    </html>

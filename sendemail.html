@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>
+      Sähköpostin lähetys
+    </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+     <header>
+      <h1>Lähetä Viesti</h1>
+    </header>
+
+    <div class="lomake-alue">
+      <form id="opiskelija-lomake">
+        <h1>Lähetä viesti</h1>
+        <div class="virheilmoitus"></div>
+        <div>
+          <label>Nimi: </label>
+          <br>
+          <input type="text" id="nimi">
+        </div>
+        <div>
+          <label>Email: </label>
+          <br>
+          <input type="text" id="email">
+        </div>
+        <div>
+          <label>Viesti: </label>
+          <br>
+          <textarea></textarea>
+        </div>
+        <input class="lahetanappi" type="submit" value="Lähetä">
+      </form>
+    </div>
+    <script src="sendemail.js"></script>
+  </body>
+</html>
