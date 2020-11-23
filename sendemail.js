@@ -1,15 +1,15 @@
 
 const emailnappi = document.querySelector('.lahetanappi');
-const nimiSisalto = document.querySelector('#nimi');
+/*const nimiSisalto = document.querySelector('#nimi');
 const emailSisalto = document.querySelector('#email');
 const viestiSisalto = document.querySelector('#viesti');
-const virhe = document.querySelector ('.virheilmoitus');
+const virhe = document.querySelector ('.virheilmoitus');*/
 
 emailnappi.addEventListener('click', e => {
   e.preventDefault();
   sendJSON();
 
-  if(nimiSisalto.value === '' || emailSisalto.value === '' || viestiSisalto.value === ''){
+ /* if(nimiSisalto.value === '' || emailSisalto.value === '' || viestiSisalto.value === ''){
   virhe.classList.add('virhe');
   virhe.innerHTML = 'Täytä kaikki kentät!';
   setTimeout(() => virhe.classList.remove('virhe'), 3000);
@@ -24,6 +24,7 @@ emailnappi.addEventListener('click', e => {
   emailSisalto.value = '';
   viestiSisalto.value = '';
   }
+  */
 });
 
 function sendJSON(){ 
